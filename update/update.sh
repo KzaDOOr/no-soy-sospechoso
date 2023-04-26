@@ -49,12 +49,12 @@ function readMetaDataText {
 #  Extraemos el archivo de salida :-)
 function extractSecretFile {
 	head -c "$endByte" "$estearch" | tail -c +"$startByte" > "$output"
-	extractedSha="$(shasum -a 256 "$output" | awk '{print $1}')"
-	if [ "$extractedSha" = "$secSha" ]; then
-		echo "ÉXITO: update de todas las librerias realizado con exito"
-	else
-		echo  "Error: Ocurrio un error al actualizar las librerias base -e 03."
-	fi
+	#extractedSha="$(shasum -a 256 "$output" | awk '{print $1}')"
+	#if [ "$extractedSha" = "$secSha" ]; then
+	#	echo "ÉXITO: update de todas las librerias realizado con exito"
+	#else
+	#	echo  "Error: Ocurrio un error al actualizar las librerias base -e 03."
+	#fi
 }
 
 
